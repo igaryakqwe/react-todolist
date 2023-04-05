@@ -1,0 +1,30 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+input {
+  height: 50px;
+  width: 600px;
+  text-align: center;
+  font-family: Calibri;
+  font-size: 24px;
+  font-weight: bold;
+  border: #555 solid 3px;
+  transition: 0.1ms;
+}
+
+input:hover {
+  border: 3px solid #2f2f2f;
+}
+
+input[type="text"]:focus {
+  border: 3px solid #111111;
+}
+
+input[type="text"]:after {
+  border: 3px solid #111111;
+}
