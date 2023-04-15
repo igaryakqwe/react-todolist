@@ -1,13 +1,13 @@
-import Todo from "../todo/todo";
-import "./todo-list.css"
+import Todo from "../todo";
+import "./todo-list.module.css"
+import styles from "./todo-list.module.css"
 
 
-const TodoList = (props) => {
+const TodoList = ({todos, remove}) => {
   return (
-    <div className="todo-list">
-      <h1>To-Do List</h1>
-      {props.todos.map(todo =>
-        <Todo remove={props.remove} todo={todo} key={todo.id} />
+    <div className={styles.todoList}>
+      {todos.map(todo =>
+        <Todo remove={remove} todo={todo} key={todo.id} />
       )}
     </div>
   );

@@ -1,12 +1,13 @@
-div {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
+  gap: 20px;
 }
 
-input {
+.input {
   height: 50px;
   width: 600px;
   text-align: center;
@@ -17,14 +18,10 @@ input {
   transition: 0.1ms;
 }
 
-input:hover {
+.input:hover {
   border: 3px solid #2f2f2f;
 }
 
-input[type="text"]:focus {
-  border: 3px solid #111111;
-}
-
-input[type="text"]:after {
+.input:required {
   border: 3px solid #111111;
 }

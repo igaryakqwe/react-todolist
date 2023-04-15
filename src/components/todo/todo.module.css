@@ -1,0 +1,61 @@
+.todo {
+  width: 600px;
+  height: 50px;
+  border-bottom: #575757 solid 3px;
+  border-radius: 5px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  font-weight: bold;
+}
+
+.todo__section {
+  margin-left: 10px;
+  padding-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 2.5px 3px 0 0;
+  cursor: pointer;
+  transition-delay: 0.3s;
+}
+
+.checkbox:checked + .checkbox__label {
+  text-decoration: line-through;
+}
+
+.button {
+  border: none;
+  background-color:  white;
+  height: 30px;
+  cursor: pointer;
+  margin: 5px 5px 0 0;
+  padding: 0 0 0 0;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.button:hover {
+  background-color: #d20000;
+  height: 30px;
+  border-radius: 6px;
+}
+
+.button:active {
+  background-color: #b00000;
+  height: 30px;
+}
+
+.checkbox__label {
+  font-family: Calibri;
+  font-size: 20px;
+}

@@ -3,9 +3,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-}
-
-h1 {
-  font-family: Calibri;
+  gap: 10px;
 }

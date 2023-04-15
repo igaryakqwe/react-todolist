@@ -1,36 +1,31 @@
 import React, {useState} from 'react';
-import TodoList from "../todo-list/todo-list";
-import "./todo-form.css"
+import styles from "./todo-form.module.css";
 
-const TodoForm = () => {
-  const [todos, setTodos] = useState([]);
-  const [value, setValue] = useState();
-  const counter = todos.length + 1;
+const TodoForm = ({onAdd}) => {
+  const [value, setValue] = useState("");
 
-  const addTodo = (e) => {
-    const todoFabric = (id, text) => {
-      return {id, text}
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const trimmedValue = value.trim();
+    if (trimmedValue) {
+      onAdd(trimmedValue);
+      setValue("");
     }
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      setTodos([...todos, todoFabric(counter, value)]);
-      setValue('');
-    }
-  }
+  };
 
-  const removeTodo = (todo) => {
-    setTodos(todos.filter(e => e.id !== todo.id))
-  }
+  const handleChange = (e) => setValue(e.target.value);
 
   return (
-    <div>
-      <form>
-        <input value={value} onChange={e => setValue(e.target.value)} onKeyDown={addTodo} type="text" />
-      </form>
-      <TodoList remove={removeTodo} todos={todos} />
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        className={styles.input}
+        value={value}
+        onChange={handleChange}
+        type="text"
+        required
+      />
+    </form>
   );
-
-}
+};
 
 export default TodoForm;
