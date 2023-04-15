@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import styles from "./todo-form.module.css";
 
-const TodoForm = ({onAdd}) => {
+const TodoForm = ({add}) => {
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const trimmedValue = value.trim();
     if (trimmedValue) {
-      onAdd(trimmedValue);
+      add(trimmedValue);
       setValue("");
     }
   };
