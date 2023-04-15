@@ -3,7 +3,7 @@ import TodoForm from "./components/todo-form";
 import React, {useState} from "react";
 import TodoList from "./components/todo-list";
 
-function App() {
+const App = () => {
   const [todos, setTodos] = useState([]);
   const counter = todos.length + 1;
 
